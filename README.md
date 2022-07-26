@@ -4,7 +4,9 @@ A fast and easy action for testing your Solana Anchor project.
 
 # Usage
 
-See [action.yml](action.yml). You can specify versions of anchor, node.js, and the solana cli tools. If you don't specify a version for any of these, the action will use a pre-defined default. An example with these parameters explicitly configued is below:
+See [example-workflow.yml](example-workflow.yml)
+
+You can optionally specify versions of Anchor, Node.js, and the Solana CLI tools. Below is an example with these parameters explicitly configured:
 
 ```yaml
 steps:
