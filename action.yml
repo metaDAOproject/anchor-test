@@ -1,5 +1,8 @@
 name: 'Anchor Test'
 description: 'Run "anchor test" in a Solana Anchor project.'
+branding:
+  icon: anchor
+  color: blue
 inputs:
   node-version:
     description: 'Version of node.js to use'
