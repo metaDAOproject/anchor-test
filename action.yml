@@ -1,5 +1,5 @@
 name: 'Anchor Test'
-description: 'Run "anchor test" in a Solana Anchor project.'
+description: 'An 'anchor test' action that takes 1 minute to run.'
 branding:
   icon: anchor
   color: blue
