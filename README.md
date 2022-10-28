@@ -11,7 +11,7 @@ You can optionally specify versions of Anchor, Node.js, and the Solana CLI tools
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: metadaobuilders/anchor-test@v1
+  - uses: metadaobuilders/anchor-test@v1.1
     with: 
       anchor-version: '0.24.2' 
       solana-cli-version: '1.10.32'
