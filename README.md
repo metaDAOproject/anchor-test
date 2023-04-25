@@ -4,6 +4,8 @@ A fast, easy, and secure action for testing [Anchor](https://www.anchor-lang.com
 
 # Usage
 
+## Example workflow
+
 Here's an example workflow:
 
 ```yaml
@@ -17,7 +19,11 @@ jobs:
       - uses: metadaoproject/anchor-test@v1.2
 ```
 
-This will use the default versions of Anchor, Node.js, and the Solana CLI tools, which are 0.27.0, 16.15.1, and 1.15.2 respectively. You can also configure these versions like do:
+This will use the default versions of Anchor, Node.js, and the Solana CLI tools, which are 0.27.0, 16.15.1, and 1.15.2 respectively. 
+
+## Configuring versions
+
+You can also configure these versions like so:
 
 ```yaml
 steps:
