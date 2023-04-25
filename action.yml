@@ -9,13 +9,13 @@ inputs:
     required: false
     default: '16.15.1' # LTS
   solana-cli-version:
-    description: 'Version of solana cli tools to use'
+    description: 'Version of Solana CLI to use'
     required: false
-    default: '1.14.3' # stable
+    default: '1.15.2' # stable
   anchor-version:
-    description: 'Version of anchor to use'
+    description: 'Version of Anchor to use'
     required: false
-    default: '0.24.2' # latest
+    default: '0.27.0' # latest
 runs:
   using: 'composite'
   steps:
