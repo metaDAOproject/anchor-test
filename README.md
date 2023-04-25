@@ -2,9 +2,9 @@
 
 A fast, easy, and secure action for testing [Anchor](https://www.anchor-lang.com/) projects. Completes in ~1 minute.
 
-# Usage
+## Usage
 
-## Example workflow
+### Example workflow
 
 Here's an example workflow:
 
@@ -21,7 +21,7 @@ jobs:
 
 This will use the default versions of Anchor, Node.js, and the Solana CLI tools, which are 0.27.0, 16.15.1, and 1.15.2 respectively. 
 
-## Configuring versions
+### Configuring versions
 
 You can also configure these versions like so:
 
@@ -35,6 +35,6 @@ steps:
       node-version: '16.15.1'
 ```
 
-# License
+## License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
