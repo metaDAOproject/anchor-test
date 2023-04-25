@@ -1,5 +1,5 @@
 name: 'Anchor Test'
-description: 'An 'anchor test' action that takes 1 minute to run.'
+description: 'An "anchor test" action that takes 1 minute to run.'
 branding:
   icon: anchor
   color: blue
