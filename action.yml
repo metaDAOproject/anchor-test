@@ -19,9 +19,11 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: actions/setup-node@v3
+    - uses: metadaoproject/setup-anchor@v1.1
       with:
         node-version: ${{ inputs.node-version }}
+        solana-cli-version: ${{ inputs.solana-cli-version }}
+        anchor-version: ${{ inputs.anchor-version }}
     - name: Cache node_modules
       uses: actions/cache@v3
       with:
@@ -30,24 +32,8 @@ runs:
     - name: Install node_modules
       run: yarn
       shell: bash
-    - name: Cache Solana CLI tools
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.cache/solana/
-          ~/.local/share/solana/
-        key: solana-cli-${{ runner.os }}-build-${{ inputs.solana-cli-version }}
-    - name: Install Solana CLI tools
-      run: sh -c "$(curl -sSfL https://release.solana.com/v${{ inputs.solana-cli-version }}/install)"
-      shell: bash
-    - name: Update PATH
-      run: echo "/home/runner/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH 
-      shell: bash
     - name: Create keypair
       run: solana-keygen new --no-bip39-passphrase
-      shell: bash
-    - name: Install Anchor
-      run: npm i -g @project-serum/anchor-cli@${{ inputs.anchor-version }}
       shell: bash
     - name: Make Anchor.toml compatible with runner
       run: sed -i 's:/user/:/runner/:' Anchor.toml
