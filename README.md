@@ -29,11 +29,28 @@ You can also configure these versions like so:
 steps:
   - uses: actions/checkout@v3
   - uses: metadaoproject/anchor-test@v1.2
-    with: 
-      anchor-version: '0.24.2' 
+    with:
+      anchor-version: '0.24.2'
       solana-cli-version: '1.10.32'
       node-version: '16.15.1'
 ```
+
+### Cargo Features
+
+You can pass in features to cargo via `anchor test` by using the `features` input:
+
+```yaml
+steps:
+  - uses: actions/checkout@v3
+  - uses: metadaoproject/anchor-test@v1.2
+    with: 
+      anchor-version: '0.24.2'
+      solana-cli-version: '1.10.32'
+      node-version: '16.15.1'
+      features: 'my-feature'
+```
+
+This defaults to 'default'.
 
 ## License
 
