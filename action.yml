@@ -16,6 +16,10 @@ inputs:
     description: 'Version of Anchor to use'
     required: false
     default: '0.27.0' # latest
+  features:
+    description: 'Features to pass to cargo'
+    required: false
+    default: 'default'
 runs:
   using: 'composite'
   steps:
@@ -47,6 +51,6 @@ runs:
     - name: Cache Cargo dependencies
       uses: Swatinem/rust-cache@v2
     - name: Run tests
-      run: anchor test
+      run: anchor test -- --features {{ inputs.features }}
       shell: bash
 
