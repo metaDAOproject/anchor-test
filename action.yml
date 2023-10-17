@@ -11,11 +11,11 @@ inputs:
   solana-cli-version:
     description: 'Version of Solana CLI to use'
     required: false
-    default: '1.15.2' # stable
+    default: '1.17.1' # stable
   anchor-version:
     description: 'Version of Anchor to use'
     required: false
-    default: '0.27.0' # latest
+    default: '0.29.0' # latest
   features:
     description: 'Features to pass to cargo'
     required: false
@@ -23,7 +23,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: metadaoproject/setup-anchor@v1.1
+    - uses: metadaoproject/setup-anchor@v2
       with:
         node-version: ${{ inputs.node-version }}
         solana-cli-version: ${{ inputs.solana-cli-version }}
