@@ -7,7 +7,7 @@ inputs:
   node-version:
     description: 'Version of node.js to use'
     required: false
-    default: '16.15.1' # LTS
+    default: '20.11.0' # LTS
   solana-cli-version:
     description: 'Version of Solana CLI to use'
     required: false
