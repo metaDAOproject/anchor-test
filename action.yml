@@ -1,27 +1,31 @@
-name: 'Anchor Test'
+name: "Anchor Test"
 description: 'An "anchor test" action that runs in ~1 minute.'
 branding:
   icon: anchor
   color: blue
 inputs:
   node-version:
-    description: 'Version of node.js to use'
+    description: "Version of node.js to use"
     required: false
-    default: '20.11.0' # LTS
+    default: "20.11.0" # LTS
+  rust-version:
+    description: "Version of rust to use"
+    required: false
+    default: "stable" # stable
   solana-cli-version:
-    description: 'Version of Solana CLI to use'
+    description: "Version of Solana CLI to use"
     required: false
-    default: '1.17.1' # stable
+    default: "1.17.1" # stable
   anchor-version:
-    description: 'Version of Anchor to use'
+    description: "Version of Anchor to use"
     required: false
-    default: '0.29.0' # latest
+    default: "0.29.0" # latest
   features:
-    description: 'Features to pass to cargo'
+    description: "Features to pass to cargo"
     required: false
-    default: 'default'
+    default: "default"
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - uses: metadaoproject/setup-anchor@v2
       with:
@@ -45,7 +49,7 @@ runs:
     - name: Install Cargo toolchain
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: stable
+        toolchain: ${{ inputs.rust-version }}
         profile: minimal
         components: rustc
     - name: Cache Cargo dependencies
@@ -53,4 +57,3 @@ runs:
     - name: Run tests
       run: anchor test -- --features ${{ inputs.features }}
       shell: bash
-
