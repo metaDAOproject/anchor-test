@@ -11,7 +11,7 @@ inputs:
   solana-cli-version:
     description: 'Version of Solana CLI to use'
     required: false
-    default: '1.18.26' # stable
+    default: '1.17.1' # stable
   anchor-version:
     description: 'Version of Anchor to use'
     required: false
@@ -23,7 +23,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: metadaoproject/setup-anchor@v3.2
+    - uses: metadaoproject/setup-anchor@v3.3
       with:
         node-version: ${{ inputs.node-version }}
         solana-cli-version: ${{ inputs.solana-cli-version }}
@@ -53,4 +53,3 @@ runs:
     - name: Run tests
       run: anchor test -- --features ${{ inputs.features }}
       shell: bash
-
