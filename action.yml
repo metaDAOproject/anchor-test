@@ -45,7 +45,7 @@ runs:
     - name: Install Cargo toolchain
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: stable
+        toolchain: 1.86.0
         profile: minimal
         components: rustc
     - name: Cache Cargo dependencies
