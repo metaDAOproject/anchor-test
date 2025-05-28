@@ -48,6 +48,8 @@ runs:
         toolchain: 1.86.0
         profile: minimal
         components: rustc
+        override: true
+        default: true
     - name: Cache Cargo dependencies
       uses: Swatinem/rust-cache@v2
     - name: Run tests
