@@ -45,11 +45,9 @@ runs:
     - name: Install Cargo toolchain
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: 1.86.0
+        toolchain: stable
         profile: minimal
         components: rustc
-        override: true
-        default: true
     - name: Cache Cargo dependencies
       uses: Swatinem/rust-cache@v2
     - name: Run tests
