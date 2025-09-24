@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - uses: metadaoproject/anchor-test@v2.2
+      - uses: metadaoproject/anchor-test@v2.3
 ```
 
 This will use the default versions of Anchor, Node.js, and the Solana CLI tools, which are 0.27.0, 16.15.1, and 1.15.2 respectively. 
@@ -28,7 +28,7 @@ You can also configure these versions like so:
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: metadaoproject/anchor-test@v2.2
+  - uses: metadaoproject/anchor-test@v2.3
     with:
       anchor-version: '0.29.0'
       solana-cli-version: '1.18.26'
@@ -42,7 +42,7 @@ You can pass in features to cargo via `anchor test` by using the `features` inpu
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: metadaoproject/anchor-test@v2.2
+  - uses: metadaoproject/anchor-test@v2.3
     with: 
       anchor-version: '0.29.0'
       solana-cli-version: '1.18.26'
