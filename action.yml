@@ -23,7 +23,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: metadaoproject/setup-anchor@v3.2
+    - uses: metadaoproject/setup-anchor@v3.4
       with:
         node-version: ${{ inputs.node-version }}
         solana-cli-version: ${{ inputs.solana-cli-version }}
